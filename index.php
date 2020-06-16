@@ -5,7 +5,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Colibrity</title>
+    <title>ADV</title>
 
     <!--FAVICON-->
     <link rel="apple-touch-icon" sizes="180x180" href="fav/apple-touch-icon.png">
@@ -17,365 +17,320 @@
     <meta name="theme-color" content="#ffffff">
 
     <!--STYLES-->
-    <link rel="stylesheet" type="text/css" href="/css/main.min.css"/>
     <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/bootstrap/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="/css/main.min.css"/>
 </head>
 <body>
-    <div id="app">
+<div id="app">
+    <div class="first-screen">
         <header class="header">
             <div class="container">
-                <a href="#">
-                    <div class="logo">
-                        <div class="logo__picture">
-                            <img src="img/logo_white.png" alt="">
-                        </div>
-                        <div class="logo__text">
-                            <p>Colibrity Agency</p>
-                        </div>
-                    </div>
-                </a>
-                <div class="menu-button">
-                    <div class="menu-button__box">
-                        <div class="line"></div>
-                        <div class="line"></div>
-                    </div>
+                <div class="logo">
+                    <a href="">
+                        <img src="img/logo-light.svg" alt="">
+                    </a>
                 </div>
-                <div class="menu">
-                    <ul>
-                        <li><a href="#">Services</a></li>
-                        <li><a href="#">Projets</a></li>
-                        <li><a href="#">A propos</a></li>
-                        <li><a href="#">Blog</a></li>
+                <div class="nav">
+                    <ul class="nav__list">
+                        <li class="nav__list--item">
+                            <a class="white-text" href="#">Features</a>
+                        </li>
+                        <li class="nav__list--item">
+                            <a class="white-text" href="#">Solutions</a>
+                        </li>
+                        <li class="nav__list--item">
+                            <a class="white-text" href="#">Pricing</a>
+                        </li>
+                        <li class="nav__list--item">
+                            <a class="white-text" href="#">Support</a>
+                        </li>
+                        <li class="nav__list--item">
+                            <a class="white-text" href="#">About Us</a>
+                        </li>
                     </ul>
-                    <div class="call-button">
-                        <div class="call-button__box">
-                            <i class="icon-phone"></i>
-                        </div>
+                </div>
+                <div class="account btn-group">
+                    <button class="account__text" type="button" class="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <span class="icon-account"></span>
+                        <span>My account</span>
+                        <img src="img/user.svg" alt="">
+                    </button>
+                    <div class="dropdown-menu dropdown-menu-right">
+                        <form class="dropdown-menu__form" action="">
+                            <div class="title">
+                                <p>Please login</p>
+                            </div>
+                            <div class="content">
+                                <input id="name" type="text" placeholder="Name">
+                                <input id="pass" type="password" placeholder="Password">
+                                <div class="links">
+                                    <a href="#">Forgot your password?</a>
+                                    <p>Not have an account?<a href="#">Register</a></p>
+                                </div>
+                                <button class="btn btn-custom btn-custom--green">Login</button>
+                            </div>
+                        </form>
                     </div>
                 </div>
             </div>
         </header>
-        <div class="box" :style="{background:activeColors[counter]}">
-<!--            <div class="wrap">-->
-<!--                <div id="slider">-->
-<!--                    <transition-group tag="div" :name="transitionName" class="slides-group">-->
-<!--                        <div v-if="show" :key="current" class="slide" :class="slides[current].className">-->
-<!--                            <img :src="'img/'+counter+'.png'" alt="">-->
-<!--                        </div>-->
-<!--                    </transition-group>-->
-<!--                    <div class="btn btn-prev" aria-label="Previous slide" @click="slide(-1)">-->
-<!--                        &#10094;-->
-<!--                    </div>-->
-<!--                    <div class="btn btn-next" aria-label="Next slide" @click="slide(1)">-->
-<!--                        &#10095-->
-<!--                    </div>-->
-<!--                </div>-->
-<!--            </div>-->
-<!--            <div class="image" :class="{hideImage : isHide, disactive: isHide}">-->
-<!--                <img :src="'img/'+counter+'.png'" alt="" >-->
-<!--            </div>-->
-<!--            <div class="image" :class="{showImage : isShow, active: isShow}" >-->
-<!--                <img :src="'img/'+ (counter+1) +'.png'"alt="">-->
-<!--            </div>-->
-<!--            <div class="wrap-img">-->
-<!--                <div class="wrap-img-screen">-->
-<!--                    <div class="wrap-img-screen__box" v-for="item in len">-->
-<!--                        <img :src="'img/'+item+'.png'" alt="">-->
-<!--                    </div>-->
-<!--                </div>-->
-<!--            </div>-->
-<!--            <p style="position: fixed; left: 0;top: 100px;z-index: 10000000">{{len}}</p>-->
-<!--            <button style="position: fixed; left: 0;top: 200px;z-index: 10000000" @click="clone">Добавить</button>-->
-            <div class="swiper-container gallery-thumbs">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                        <img src="img/1.png" alt="">
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="img/2.png" alt="">
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="img/3.png" alt="">
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="img/4.png" alt="">
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="img/5.png" alt="">
-                    </div>
-                </div>
-                <!-- Add Pagination -->
-<!--                <div class="swiper-pagination"></div>-->
-                <!-- Add Arrows -->
-<!--                <div class="swiper-button-next"></div>-->
-<!--                <div class="swiper-button-prev"></div>-->
-            </div>
-            <div class="swiper-container" style="position: fixed;height: 100%;width: 100%;border: 1px solid red;">
-                <div class="swiper-wrapper" style="height: 100%;">
-                    <div class="swiper-slide">1</div>
-                    <div class="swiper-slide">2</div>
-                    <div class="swiper-slide">3</div>
-                    <div class="swiper-slide">4</div>
-                    <div class="swiper-slide">5</div>
-                </div>
-            </div>
-            <div class="top">
-                <div class="rails">
-                    <h2 class="transparent" :class="{showtext:counter === 1}">Marketing</h2>
-                    <h2 class="transparent" :class="{showtext:counter === 2}">Sites</h2>
-                    <h2 class="transparent" :class="{showtext:counter === 3}">Applications</h2>
-                    <h2 class="transparent" :class="{showtext:counter === 4}">Motion</h2>
-                    <h2 class="transparent" :class="{showtext:counter === 5}"></h2>
-                </div>
-                <div class="rails">
-                    <h2 class="full" :class="{showtext:counter === 1}">Social Media</h2>
-                    <h2 class="full" :class="{showtext:counter === 2}">internet</h2>
-                    <h2 class="full" :class="{showtext:counter === 3}">mobiles</h2>
-                    <h2 class="full" :class="{showtext:counter === 4}">design</h2>
-                    <h2 class="full" :class="{showtext:counter === 5}">Branding</h2>
-                </div>
-            </div>
-            <div class="center">
-                <div class="rails">
-                    <p>Vous fixez des objectifs et nous proposons des solutions</p>
-                    <p>De quoi a besoin un visiteur ? De l’Information !</p>
-                    <p>Collaborons ensemble dès maintenant !</p>
-                    <p>L’utilisation du motion design facilitent la communication sur des sujets complexes</p>
-                    <p>Une entreprise qui offre quelque chose d'unique et de mémorable</p>
-                </div>
-            </div>
-            <div class="bottom">
-                <div class="rails">
-                    <h2 class="transparent" :class="{showtext:counter === 1}">Marketing</h2>
-                    <h2 class="transparent" :class="{showtext:counter === 2}">Sites</h2>
-                    <h2 class="transparent" :class="{showtext:counter === 3}">Applications</h2>
-                    <h2 class="transparent" :class="{showtext:counter === 4}">Motion</h2>
-                    <h2 class="transparent" :class="{showtext:counter === 5}"></h2>
-                </div>
-                <div class="rails">
-                    <h2 class="full" :class="{showtext:counter === 1}">Social Media</h2>
-                    <h2 class="full" :class="{showtext:counter === 2}">internet</h2>
-                    <h2 class="full" :class="{showtext:counter === 3}">mobiles</h2>
-                    <h2 class="full" :class="{showtext:counter === 4}">design</h2>
-                    <h2 class="full" :class="{showtext:counter === 5}">Branding</h2>
-                </div>
-            </div>
-            <div class="navigation">
-                <div class="container">
-                    <div class="arrows">
-                        <button class="arrows__item swiper-button-prev" @click="changeSlide('minus')">
-                            <div class="back-pulse">
+        <div class="first-screen__content">
+            <div class="panel-bottom-back">
+                <div class="panel-bottom-back__left">
 
-                            </div>
-                            <i class="icon-arrow-left" aria-hidden="true"></i>
-                        </button>
-                        <button class="arrows__item swiper-button-next" @click="changeSlide('plus')">
-                            <div class="back-pulse">
+                </div>
+                <div class="panel-bottom-back__right">
 
-                            </div>
-                            <i class="icon-arrow-right" aria-hidden="true"></i>
-                        </button>
-                    </div>
-                    <div class="pages swiper-pagination">
-<!--                        <p>-->
-<!--                            <span>{{counter+1}}</span>-->
-<!--                            <span>/</span>-->
-<!--                            <span>5</span>-->
-<!--                        </p>-->
-                    </div>
-                    <div class="language">
-                        <p>En</p>
-                    </div>
                 </div>
             </div>
-            <div class="loader">
-                <div class="full-line" :class="{loaderactive:loaderShow == true}">
-                </div>
-                <div class="full-line" :class="{loaderactivefalse:loaderShow == false}">
-                </div>
-            </div>
-            <button style="z-index:100000000000;position: fixed;bottom:0;left: 0">{{ currentTime }}</button>
-            <p style="z-index:100000000000;position: fixed;bottom:0;left: 0">{{message2}}</p>
-        </div>
-        <div class="modal-menu">
-            <header class="header">
-                <div class="container">
-                    <a href="#">
-                        <div class="logo">
-                            <div class="logo__picture">
-                                <img src="img/logo_black.png" alt="">
-                            </div>
-                            <div class="logo__text">
-                                <p>Colibrity Agency</p>
-                            </div>
-                        </div>
-                    </a>
-                    <div class="menu-button">
-                        <div class="menu-button__box">
-                            <div class="line line-close"></div>
-                            <div class="line line-close"></div>
-                        </div>
-                    </div>
-                    <div class="menu">
-
-                    </div>
-                </div>
-            </header>
             <div class="container">
-                <div class="content">
-                    <div class="left">
-                        <ul>
-                            <li><a href="#">A propos</a></li>
-                            <li><a href="#">Services</a></li>
-                            <li><a href="#">Projets</a></li>
-                            <li><a href="#">Blog</a></li>
-                            <li><a href="#">Recrutement</a></li>
-                            <li><a href="#">Contacts</a></li>
-                        </ul>
-                    </div>
-                    <div class="right">
-                        <div class="text">
-                            <p>
-                                Vous cherchez à être conseillé par votre partenaire en design et en communication,
-                                anticiper des problèmes potentiels et les besoins du marché ? Laissez-nous faire le
-                                travail que nous aimons tant. Etre dans le futur pour construire le présent
-                                d’aujourd’hui... Cette approche permet de vous offrir un accompagnement qui suit les
-                                tendances et même d'en devenir auteur. Cela s'est avéré possible grâce à la politique
-                                interne de l’entreprise qui base ses conseils sur les statistiques en chiffres et
-                                l’expérience de Colibrity team. Colibrity est une agence créative éco-responsable basée
-                                en France, spécialisée dans le design graphique et le marketing digital. Si nos valeurs
-                                raisonnent en vous, faisons connaissance dès maintenant !
-                            </p>
-                        </div>
-                        <div class="links">
-                            <ul>
-                                <li>
-                                    <a href="#">Instagram</a>
-                                    <div class="icon">
-                                        <span class="icon-arrow-right"></span>
-                                    </div>
-                                </li>
-                                <li>
-                                    <a href="#">Facebook</a>
-                                    <div class="icon">
-                                        <span class="icon-arrow-right"></span>
-                                    </div>
-                                </li>
-                                <li>
-                                    <a href="#">LinkedIn</a>
-                                    <div class="icon">
-                                        <span class="icon-arrow-right"></span>
-                                    </div>
-                                </li>
-                                <li>
-                                    <a href="#">Behance</a>
-                                    <div class="icon">
-                                        <span class="icon-arrow-right"></span>
-                                    </div>
-                                </li>
-                                <li>
-                                    <a href="#">Pinterest</a>
-                                    <div class="icon">
-                                        <span class="icon-arrow-right"></span>
-                                    </div>
-                                </li>
-                            </ul>
-                        </div>
+                <div class="bottom-panel">
+                    <div class="bottom-panel__text">
+                        <h3 class="dark-text">How its work?</h3>
+                        <p class="dark-text">Analysis of the effectiveness of individual or combined  campaigns</p>
                     </div>
                 </div>
-            </div>
-        </div>
-        <div class="modal-phone">
-            <div class="modal-phone__box">
-                <div class="close">
-
+                <div class="form-side">
+                    <div class="title">
+                        <div class="title__icon">
+                            <span class="icon-info"></span>
+                        </div>
+                        <div class="title__text">
+                            <p>Powerful digital service<br>
+                                for your business</p>
+                        </div>
+                    </div>
+                    <div class="text">
+                        <p>Create your target audience, translate ads, generate leads, analyze companies, create SMM and E-mail marketing strategies</p>
+                    </div>
+                    <form>
+                        <input class="input-custom" type="text" placeholder="E-mail address">
+                        <button class="btn-custom" type="submit">Sign up</button>
+                    </form>
                 </div>
-                <div class="title">
-                    <h2>Travaillons<br>ensemble</h2>
+                <div class="picture-side">
+                    <div class="picture-side__back">
+                        <img src="img/ring.svg" alt="">
+                    </div>
+                    <div class="picture-side__front">
+                        <img src="img/man.png" alt="">
+                    </div>
                 </div>
-                <div class="contacts">
-                    <a href="#">
-                        contact@colibrity.com
-                    </a>
-                    <a href="#">
-                        +33 (0) 6 49 16 26 52
-                    </a>
-                </div>
-                <form>
-                    <label>
-                        <input type="text" name="name" required>
-                        <span class="text">
-                            Nom, Prenom <sup>*</sup>
-                        </span>
-                    </label>
-                    <label>
-                        <input type="tel" name="phone" required>
-                        <span class="text">
-                            Telephone <sup>*</sup>
-                        </span>
-                    </label>
-                    <label>
-                        <input type="email" name="email" required>
-                        <span class="text">
-                            E-mail <sup>*</sup>
-                        </span>
-                    </label>
-                    <label>
-                        <textarea name="message">
-
-                        </textarea>
-                        <span class="text">
-                            Message <sup>*</sup>
-                        </span>
-                    </label>
-                    <button type="submit">
-                        <p>Envoyer</p>
-                    </button>
-                </form>
             </div>
         </div>
     </div>
-    <script src="js/vue.js"></script>
-    <script src="js/main.js"></script>
-    <script src="js/jquery-3.3.1.min.js"></script>
-    <script src="js/swiper.min.js"></script>
-    <script>
-        var galleryThumbs = new Swiper('.gallery-thumbs', {
-            slidesPerView: 1,
-            direction: 'vertical',
-            speed: 1000,
-            loop: true,
-            pagination: {
-                el: '.swiper-pagination',
-                type: 'fraction',
-            },
-            navigation: {
-                nextEl: '.swiper-button-next',
-                prevEl: '.swiper-button-prev',
-            },
-            autoplay: {
-                delay: 9000,
-                disableOnInteraction: false,
-            },
-        });
-        var swiper = new Swiper('.swiper-container', {
-            slidesPerView: 1,
-            speed: 1000,
-            effect: 'fade',
-            loop: true,
-            navigation: {
-                nextEl: '.swiper-button-next',
-                prevEl: '.swiper-button-prev',
-            },
-        });
-    </script>
-    <script>
-        $('button').on('click', function() {
-            $(this).prop('disabled', true);
-            setTimeout(function() {
-                $(this).prop('disabled', false);
-            }.bind(this), 1e3);
-        });
-    </script>
+    <section class="advantages">
+        <div class="container">
+            <div class="title">
+                <h2>Your own audience</h2>
+                <p>Analysis of the effectiveness of individual or combined  campaigns</p>
+            </div>
+            <div class="content">
+                <div class="block">
+                    <div class="block__icon">
+                        <img src="img/1.svg" alt="">
+                    </div>
+                    <div class="block__title">
+                        <b>Management</b>
+                    </div>
+                    <div class="block__text">
+                        <p>Custom panels Advanced Targeting
+                            Set up conversion limits and advertising</p>
+                    </div>
+                </div>
+
+                <div class="block">
+                    <div class="block__icon">
+                        <img src="img/2.svg" alt="">
+                    </div>
+                    <div class="block__title">
+                        <b>Analytic</b>
+                    </div>
+                    <div class="block__text">
+                        <p>50+ statistics cuts Comparative reports
+                            IP Intelligence by Digital Element</p>
+                    </div>
+                </div>
+
+                <div class="block">
+                    <div class="block__icon">
+                        <img src="img/3.svg" alt="">
+                    </div>
+                    <div class="block__title">
+                        <b>Optimization</b>
+                    </div>
+                    <div class="block__text">
+                        <p>Custom panels Advanced Targetin Set up conversion limits and advertising budget Currency
+                            selection</p>
+                    </div>
+                </div>
+
+                <div class="block">
+                    <div class="block__icon">
+                        <img src="img/4.svg" alt="">
+                    </div>
+                    <div class="block__title">
+                        <b>Customization</b>
+                    </div>
+                    <div class="block__text">
+                        <p>Feature-rich API Third Party Integration Real-time business intelligence</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="broadcast">
+        <div class="container">
+            <div class="picture-side">
+                <img src="img/megafone.png" alt="">
+            </div>
+            <div class="text-side">
+                <div class="text">
+                    <h2>Broadcast your announcements
+                        to your audience from the list</h2>
+                    <p>But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="interface">
+        <div class="container">
+            <div class="text-side">
+                <div class="block">
+                    <h3>Creating and analyze</h3>
+                    <p>But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was
+                        born and</p>
+                </div>
+                <div class="block">
+                    <h3>Share tihis audience</h3>
+                    <p>But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was
+                        born and</p>
+                </div>
+            </div>
+            <div class="picture-side">
+                <div class="picture-side__dashed">
+                    <img src="img/dashed.svg" alt="">
+                </div>
+                <div class="picture-side__main">
+                    <img src="img/interface.png" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="results">
+        <div class="back">
+            <img src="img/ellipses.svg" alt="">
+        </div>
+        <div class="container">
+            <div class="text">
+                <h3>Planning and forecasting results</h3>
+                <p>But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and
+                    I must explain to you how all this mistaken idea of denouncing pleasure</p>
+                <a class="btn-custom" href="#">Sign up</a>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="container">
+            <div class="left-side">
+                <div class="menu">
+                    <div class="logo">
+                        <a href="/">
+                            <img src="img/logo-gray.svg" alt="">
+                        </a>
+                    </div>
+                    <div class="nav">
+                        <ul class="nav__list">
+                            <li class="nav__list--item">
+                                <a class="dark-text" href="#">Pricing</a>
+                            </li>
+                            <li class="nav__list--item">
+                                <a class="dark-text" href="#">Support</a>
+                            </li>
+                            <li class="nav__list--item">
+                                <a class="dark-text" href="#">Pricing</a>
+                            </li>
+                            <li class="nav__list--item">
+                                <a class="dark-text" href="#">Support</a>
+                            </li>
+                            <li class="nav__list--item">
+                                <a class="dark-text" href="#">About Us</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="copyright">
+                    <p>© Copyright Analyticpage 2020. All rights reserved.</p>
+                </div>
+            </div>
+            <div class="right-side">
+                <p class="message">If you still have questions. Contact us</p>
+                <a href="#">
+                    <div class="mail">
+                        <div class="mail__icon">
+                            <img src="img/letter.svg" alt="">
+                        </div>
+                        <div class="mail__text">
+                            <b>support@socialadv.com</b>
+                        </div>
+                        <div class="mail__arrow">
+                            <img src="img/arrow.svg" alt="">
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </footer>
+    <section class="modal">
+        <div class="popup-frame">
+            <div class="popup-frame__title">
+                <p>Sign in</p>
+            </div>
+            <div class="popup-frame__body">
+                <div class="welcome-text">
+                    <b>Welcome to Social adv</b>
+                    <p>Create new audiences for your business</p>
+                </div>
+                <div class="login">
+                    <div class="login__form">
+                        <label>
+                            <input class="input-custom" type="email" name="email" placeholder="Email" required>
+                            <span class="errors">
+                                Please enter a valid email address
+                            </span>
+                        </label>
+                        <label>
+                            <input class="input-custom" type="password" name="pass" placeholder="Password" required>
+                            <span class="errors">
+                                Please enter a valid email address
+                            </span>
+                        </label>
+                        <div class="button__block">
+                            <button class="btn-custom btn-custom--blue" type="submit">
+                                Log in
+                            </button>
+                            <div class="links">
+                                <a href="#">Forgot your password?</a>
+                                <p>Not have an account? <a href="#">Register</a></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="facebook__form">
+                        <div class="divider">
+                            <p><span>or</span></p>
+                        </div>
+                        <button class="btn-custom btn-custom--facebook">
+                            <i class="fa fa-facebook" aria-hidden="true"></i>
+                            <p>Continue with facebook</p>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+<script src="js/jquery-3.3.1.min.js"></script>
+<script src="js/bootstrap/bootstrap.bundle.js"></script>
 </body>
 </html>

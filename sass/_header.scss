@@ -1,0 +1,9 @@
+.header {
+  height: 140px;
+  display: flex;align-items: center;
+  .container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}

@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'icomoon';
-  src:  url('fonts/icomoon.eot?s5g0au');
-  src:  url('fonts/icomoon.eot?s5g0au#iefix') format('embedded-opentype'),
-    url('fonts/icomoon.ttf?s5g0au') format('truetype'),
-    url('fonts/icomoon.woff?s5g0au') format('woff'),
-    url('fonts/icomoon.svg?s5g0au#icomoon') format('svg');
+  src:  url('fonts/icomoon.eot?uh5619');
+  src:  url('fonts/icomoon.eot?uh5619#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?uh5619') format('truetype'),
+    url('fonts/icomoon.woff?uh5619') format('woff'),
+    url('fonts/icomoon.svg?uh5619#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -13,7 +13,7 @@
 [class^="icon-"], [class*=" icon-"] {
   /* use !important to prevent issues with browser extensions that change fonts */
   font-family: 'icomoon' !important;
-  speak: none;
+  speak: never;
   font-style: normal;
   font-weight: normal;
   font-variant: normal;
@@ -25,15 +25,21 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.icon-phone:before {
-  content: "\e901";
-}
-.icon-contact:before {
-  content: "\e901";
-}
-.icon-arrow-right:before {
-  content: "\e902";
-}
-.icon-arrow-left:before {
+.icon-account:before {
   content: "\e900";
+  color: #fff;
+}
+.icon-angle:before {
+  content: "\e901";
+  color: #fff;
+}
+.icon-info:before {
+  content: "\e902";
+  color: #fff;
+}
+.icon-letter:before {
+  content: "\e903";
+}
+.icon-user:before {
+  content: "\e904";
 }

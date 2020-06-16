@@ -1,0 +1,20 @@
+<svg width="1440" height="392" viewBox="0 0 1440 392" fill="none" xmlns="http://www.w3.org/2000/svg">
+<mask id="mask0" mask-type="alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="1440" height="392">
+<path d="M0 391.5H1440V0H0V391.5Z" fill="url(#paint0_linear)"/>
+</mask>
+<g mask="url(#mask0)">
+<circle opacity="0.35" cx="1364.25" cy="103.5" r="209.75" stroke="#5D5D6D" stroke-width="2"/>
+<circle opacity="0.35" cx="526.125" cy="442.125" r="298.625" stroke="#5D5D6D" stroke-width="2"/>
+<circle opacity="0.35" cx="57.375" cy="286.875" r="298.625" stroke="#5D5D6D" stroke-width="2"/>
+<path opacity="0.35" d="M1502 103.875C1502 179.328 1440.67 240.5 1365 240.5C1289.33 240.5 1228 179.328 1228 103.875C1228 28.4217 1289.33 -32.75 1365 -32.75C1440.67 -32.75 1502 28.4217 1502 103.875Z" stroke="#5D5D6D" stroke-width="2"/>
+<circle opacity="0.35" cx="526.5" cy="442.5" r="194.75" stroke="#5D5D6D" stroke-width="2"/>
+<circle opacity="0.35" cx="45.75" cy="328.5" r="194.75" stroke="#5D5D6D" stroke-width="2"/>
+<circle opacity="0.35" cx="46.125" cy="253.125" r="270.875" stroke="#5D5D6D" stroke-width="2"/>
+</g>
+<defs>
+<linearGradient id="paint0_linear" x1="887.927" y1="36.7728" x2="883.284" y2="391.621" gradientUnits="userSpaceOnUse">
+<stop stop-color="#3A3A51"/>
+<stop offset="1" stop-color="#3A3A51"/>
+</linearGradient>
+</defs>
+</svg>

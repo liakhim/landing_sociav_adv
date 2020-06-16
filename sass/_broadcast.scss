@@ -1,0 +1,39 @@
+.broadcast {
+  padding: 50px 0;
+  background: #FAFAFA;
+  .container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    .picture-side {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      img {
+        max-width: 620px;
+        width: 100%;
+      }
+    }
+    .text-side {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      .text {
+        max-width: 400px;
+        h2 {
+          color: #3D3D3D;
+          font-size: 1.5rem;
+          font-weight: bold;
+        }
+        p {
+          color: #3D3D3D;
+          padding: 25px 0;
+          font-size: 1rem;
+        }
+      }
+    }
+  }
+}

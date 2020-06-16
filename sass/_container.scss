@@ -1,4 +1,8 @@
 .container {
-  width: calc(100% - 80px);
-  margin: auto;
+  max-width: 1400px!important;
+}
+@media (max-width: 890px) {
+  .container {
+    max-width: 690px!important;
+  }
 }

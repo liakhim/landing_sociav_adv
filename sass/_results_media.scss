@@ -1,0 +1,31 @@
+@media (max-width: 690px) {
+  .results {
+    position: relative;
+    overflow: hidden;
+    .back {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: #3A3A51;
+      z-index: 1;
+      img {
+        width: auto;
+        height: 100%;
+      }
+    }
+    .container {
+      position: relative;
+      z-index: 2;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 50px 0;
+      .text {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        max-width: 360px;
+      }
+    }
+  }
+}

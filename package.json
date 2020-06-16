@@ -1,34 +1,30 @@
 {
-  "name": "france",
+  "name": "adv",
   "version": "1.0.0",
-  "main": "index.js",
-  "dependencies": {
+  "description": "First project",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/liakhim/landing_sociav_adv.git"
+  },
+  "author": "Michael",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/liakhim/landing_sociav_adv/issues"
+  },
+  "homepage": "https://github.com/liakhim/landing_sociav_adv#readme",
+  "devDependencies": {
     "browser-sync": "^2.26.7",
     "gulp": "^4.0.2",
     "gulp-autoprefixer": "^7.0.1",
-    "gulp-concat": "^2.6.1",
     "gulp-connect-php": "^1.0.3",
     "gulp-cssmin": "^0.2.0",
+    "gulp-install": "^1.1.0",
     "gulp-rename": "^2.0.0",
-    "gulp-rigger": "^0.5.8",
-    "gulp-uglify": "^3.0.2",
-    "jquery": "^3.4.1",
-    "livereload": "^0.9.1",
-    "vue": "^2.6.11",
-    "vue-swiper": "^0.5.0"
-  },
-  "devDependencies": {
-    "gulp-sass": "^4.0.2",
-    "node-normalize-scss": "^8.0.1",
-    "webpack": "^4.43.0",
-    "webpack-cli": "^3.3.11"
-  },
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "webpack"
-  },
-  "keywords": [],
-  "author": "M",
-  "license": "ISC",
-  "description": ""
+    "gulp-sass": "^4.1.0",
+    "node-sass": "^4.14.1"
+  }
 }

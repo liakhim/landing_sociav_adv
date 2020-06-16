@@ -1,0 +1,293 @@
+.input-custom {
+  background: #fff;
+  border: 1px solid #DEDEDE;
+  height: 40px;
+  border-radius: 20px;
+  color: #000;
+  padding: 0 25px;
+  font-size: 0.95rem;
+  &::placeholder {
+    color: #A3A3A3;
+  }
+}
+.input-custom-danger {
+  border: 1px solid $danger;
+}
+
+.btn-custom {
+  background: $yellow!important;
+  width: 144px;
+  height: 40px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #000;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+.btn-custom--green {
+  background: #5271B5!important;
+  color: #fff;
+  border: 1px solid #4162A9;
+}
+.btn-custom--facebook {
+  background: #5271B5!important;
+  color: #fff;
+  border: 1px solid #4162A9;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  i {
+    font-size: 1.2rem;
+    padding:  0 0.6rem;
+  }
+  p {
+    font-size: 1rem;
+    text-transform: none;
+  }
+}
+.btn-custom--blue {
+  background: #00A79D!important;
+  color: #fff;
+}
+
+.logo {
+  padding: 0 20px 0 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  img {
+    max-width: 146px;
+  }
+}
+.white-text {
+  color: #ffffff;
+}
+.dark-text {
+  color: #000000;
+}
+.nav {
+  color: #ffffff;
+  padding: 10px 0;
+  flex: auto;
+  &__list {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    &--item {
+      margin: 0 20px;
+      a {
+        padding: 1px 6px;
+      }
+
+    }
+  }
+}
+
+.account {
+  &__text {
+    padding: 8px 15px;
+    border-radius: 40px;
+    transition: 0.8s;
+    span {
+      font-size: 1rem;
+    }
+    .icon-account {
+      margin: 0 10px;
+    }
+    img {
+      max-width: 35px;
+      margin: 0 25px;
+    }
+    &:hover {
+      background: #2D2D43;
+    }
+  }
+  .dropdown-menu {
+    padding: 0;
+    border-radius: 10px;
+    overflow: visible;
+    margin-top: 10px;
+    &:before {
+      content: '';
+      width: 15px;
+      height: 15px;
+      transform: rotate(45deg);
+      background: #F8F8F8;
+      position: absolute;
+      top: -5px;
+      right: 48px;
+    }
+    &__form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 310px;
+      border: 1px solid #DEE2E6;
+      border-radius: 10px;
+      .title {
+        width: 100%;
+        height: 75px;
+        background: #F8F8F8;
+        padding: 24px;
+        border-radius: 10px 10px 0 0 ;
+        p {
+          font-size: 1rem;
+        }
+      }
+      .content {
+        width: 100%;
+        padding:30px 24px;
+        .links {
+          padding:20px 10px;
+          a {
+            color: #3E97FF;
+            font-size: 0.9rem;
+          }
+          p {
+            font-size: 0.9rem;
+            a {
+              padding: 0 5px;
+            }
+          }
+        }
+        input {
+          height: 46px;
+          border-radius: 23px;
+          border: 1px solid #DEDEDE;
+          padding: 0 25px;
+          width: 100%;
+          font-size: 0.9rem;
+          color: #000;
+          transition: 0.5s;
+          &:not(:last-of-type) {
+            margin-bottom: 15px;
+          }
+          &:focus {
+            &::placeholder {
+              transition: 0.5s;
+              opacity: 0;
+            }
+          }
+        }
+        button {
+          height: 36px;
+          text-transform: none;
+        }
+      }
+    }
+  }
+}
+.account.show {
+  .account__text {
+    background: #2D2D43;
+  }
+}
+
+.mail {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  &__icon {
+    padding: 0 15px 0 0;
+    img {
+      max-width: 20px;
+    }
+  }
+  &__text {
+    padding: 0;
+    b {
+      font-size: 1.8rem;
+      font-weight: normal;
+      color: #3A3A51;
+    }
+  }
+  &__arrow {
+    padding: 0 10px;
+  }
+}
+
+
+.login {
+  background: #fff;
+  &__form {
+    label {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+      &:not(:last-child) {
+        margin-bottom: 20px;
+      }
+      input {
+        width: 100%;
+        height: 56px;
+        border-radius: 30px;
+      }
+      .errors {
+        width: 100%;
+        display: none;
+        padding: 5px 10px 0 10px;
+        color: $danger;
+        font-size: 0.8rem;
+      }
+    }
+    .button__block {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: center;
+      button {
+        height: 56px;
+        border-radius: 30px;
+      }
+      .links {
+        padding: 0 15px;
+        & p {
+          color: #777777;
+        }
+        & a {
+          color: #3E97FF;
+        }
+      }
+    }
+  }
+}
+.facebook__form {
+  .divider {
+    padding: 30px 0;
+    p {
+      text-transform: uppercase;
+      font-size: 1.2rem;
+      position: relative;
+      background: #fff;
+      span {
+        background: #fff;
+        display: block;
+        width: 56px;
+        margin: auto;
+        z-index: 2;
+        position: relative;
+        text-align: center;
+      }
+      &::before {
+        display: block;                  /* делаем псевдоэлемент блоком для последующего работы с ним, как с простым div'ом */
+        width:100%;                    /* устанавливаем ширину линию. Можно использовать произвольную ширину */
+        content: '';                     /* позволяет вставлять генерируемое содержание в текст страницы, которое первоначально в тексте отсутствует */
+        position: absolute;              /* абсолютное позиционирование для управления линиями */
+        border-bottom: 1px solid #DEDEDE;   /* бордер псевдо дива, т.е. сама линия */
+        top:50%;                         /* позиционирование по вертикали */
+        right: 0;
+      }
+    }
+  }
+  button {
+    width: 100%;
+    height: 56px;
+    border-radius: 30px;
+  }
+}

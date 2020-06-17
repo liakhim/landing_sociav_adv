@@ -35,7 +35,7 @@
             z-index: 3;
             img {
               width: auto;
-              height: 100%;
+              height: auto;
             }
           }
         }
@@ -90,7 +90,7 @@
             z-index: 3;
             img {
               width: auto;
-              height: 100%;
+              height: auto;
             }
           }
         }
@@ -223,6 +223,7 @@
 @media (max-width: 991px) {
   .first-screen {
     max-height: 690px;
+    padding: 80px 0 0 0;
     &__content {
       height: calc(100vh - 80px);
       .panel-bottom-back {

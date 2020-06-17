@@ -25,6 +25,10 @@
   color: #000;
   text-transform: uppercase;
   font-weight: 600;
+  font-family: 'Poppins',sans-serif;
+  &:hover {
+    opacity: 0.9;
+  }
 }
 .btn-custom--green {
   background: #5271B5!important;
@@ -51,6 +55,18 @@
 .btn-custom--blue {
   background: #00A79D!important;
   color: #fff;
+}
+.btn-custom--sign {
+  background: transparent!important;
+  border: 1px solid #fff;
+  color: #fff;
+  text-transform: none;
+  font-weight: normal;
+  transition: 0.5s;
+  &:hover {
+    border: 1px solid #2d2d43;
+    background: #2d2d43!important;
+  }
 }
 
 .logo {
@@ -80,6 +96,8 @@
       margin: 0 20px;
       a {
         padding: 1px 6px;
+        font-family: 'Poppins',sans-serif;
+        font-weight: 500;
       }
 
     }
@@ -87,10 +105,13 @@
 }
 
 .account {
+  display: flex;
+  align-items: center;
   &__text {
-    padding: 8px 15px;
+    padding: 0 10px;
     border-radius: 40px;
     transition: 0.8s;
+    height: 40px;
     span {
       font-size: 1rem;
     }
@@ -98,8 +119,8 @@
       margin: 0 10px;
     }
     img {
-      max-width: 35px;
-      margin: 0 25px;
+      max-width: 30px;
+      margin: 0 15px;
     }
     &:hover {
       background: #2D2D43;
@@ -214,6 +235,7 @@
 
 .login {
   background: #fff;
+  width: 100%;
   &__form {
     label {
       display: flex;
@@ -228,13 +250,6 @@
         height: 56px;
         border-radius: 30px;
       }
-      .errors {
-        width: 100%;
-        display: none;
-        padding: 5px 10px 0 10px;
-        color: $danger;
-        font-size: 0.8rem;
-      }
     }
     .button__block {
       display: flex;
@@ -247,6 +262,48 @@
       }
       .links {
         padding: 0 15px;
+        & p {
+          color: #777777;
+        }
+        & a {
+          color: #3E97FF;
+        }
+      }
+    }
+  }
+}
+
+.registration {
+  background: #fff;
+  width: 100%;
+  &__form {
+    label {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+      &:not(:last-child) {
+        margin-bottom: 20px;
+      }
+      input {
+        width: 100%;
+        height: 56px;
+        border-radius: 30px;
+      }
+    }
+    .button__block {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: center;
+      button {
+        height: 56px;
+        border-radius: 30px;
+        width: 220px;
+        text-transform: none;
+      }
+      .links {
+        padding: 0 10px;
         & p {
           color: #777777;
         }
@@ -275,12 +332,12 @@
         text-align: center;
       }
       &::before {
-        display: block;                  /* делаем псевдоэлемент блоком для последующего работы с ним, как с простым div'ом */
-        width:100%;                    /* устанавливаем ширину линию. Можно использовать произвольную ширину */
-        content: '';                     /* позволяет вставлять генерируемое содержание в текст страницы, которое первоначально в тексте отсутствует */
-        position: absolute;              /* абсолютное позиционирование для управления линиями */
-        border-bottom: 1px solid #DEDEDE;   /* бордер псевдо дива, т.е. сама линия */
-        top:50%;                         /* позиционирование по вертикали */
+        display: block;
+        width:100%;
+        content: '';
+        position: absolute;
+        border-bottom: 1px solid #DEDEDE;
+        top:50%;
         right: 0;
       }
     }
@@ -290,4 +347,12 @@
     height: 56px;
     border-radius: 30px;
   }
+}
+
+.errors {
+  width: 100%;
+  display: none;
+  padding: 5px 10px;
+  color: $danger;
+  font-size: 0.8rem;
 }

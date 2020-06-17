@@ -19,7 +19,7 @@
     <!--STYLES-->
     <link rel="stylesheet" href="css/font-awesome.min.css">
     <link rel="stylesheet" href="css/bootstrap/bootstrap.css">
-    <link rel="stylesheet" type="text/css" href="/css/main.min.css"/>
+    <link rel="stylesheet" type="text/css" href="css/main.min.css"/>
 </head>
 <body>
 <div id="app">
@@ -31,7 +31,10 @@
                         <img src="img/logo-light.svg" alt="">
                     </a>
                 </div>
-                <div class="nav">
+                <div id="burger" class="burger">
+                    <span></span><span></span><span></span>
+                </div>
+                <div id="nav" class="nav">
                     <ul class="nav__list">
                         <li class="nav__list--item">
                             <a class="white-text" href="#">Features</a>
@@ -51,7 +54,10 @@
                     </ul>
                 </div>
                 <div class="account btn-group">
-                    <button class="account__text" type="button" class="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <button class="btn-custom btn-custom--sign call-register">
+                        Sign up
+                    </button>
+                    <button class="account__text" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         <span class="icon-account"></span>
                         <span>My account</span>
                         <img src="img/user.svg" alt="">
@@ -66,7 +72,7 @@
                                 <input id="pass" type="password" placeholder="Password">
                                 <div class="links">
                                     <a href="#">Forgot your password?</a>
-                                    <p>Not have an account?<a href="#">Register</a></p>
+                                    <p>Not have an account?<a class="call-register" href="#">Register</a></p>
                                 </div>
                                 <button class="btn btn-custom btn-custom--green">Login</button>
                             </div>
@@ -105,8 +111,8 @@
                         <p>Create your target audience, translate ads, generate leads, analyze companies, create SMM and E-mail marketing strategies</p>
                     </div>
                     <form>
-                        <input class="input-custom" type="text" placeholder="E-mail address">
-                        <button class="btn-custom" type="submit">Sign up</button>
+                        <input class="input-custom" name="first-screen-email" type="text" placeholder="E-mail address">
+                        <button type="button" class="btn-custom call-register">Sign up</button>
                     </form>
                 </div>
                 <div class="picture-side">
@@ -183,7 +189,7 @@
     <section class="broadcast">
         <div class="container">
             <div class="picture-side">
-                <img src="img/megafone.png" alt="">
+                <img src="img/megafone.svg" alt="">
             </div>
             <div class="text-side">
                 <div class="text">
@@ -227,7 +233,7 @@
                 <h3>Planning and forecasting results</h3>
                 <p>But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and
                     I must explain to you how all this mistaken idea of denouncing pleasure</p>
-                <a class="btn-custom" href="#">Sign up</a>
+                <a class="btn-custom call-register">Sign up</a>
             </div>
         </div>
     </section>
@@ -243,10 +249,10 @@
                     <div class="nav">
                         <ul class="nav__list">
                             <li class="nav__list--item">
-                                <a class="dark-text" href="#">Pricing</a>
+                                <a class="dark-text" href="#">Features</a>
                             </li>
                             <li class="nav__list--item">
-                                <a class="dark-text" href="#">Support</a>
+                                <a class="dark-text" href="#">Solution</a>
                             </li>
                             <li class="nav__list--item">
                                 <a class="dark-text" href="#">Pricing</a>
@@ -266,7 +272,7 @@
             </div>
             <div class="right-side">
                 <p class="message">If you still have questions. Contact us</p>
-                <a href="#">
+                <a href="mailto:support@socialadv.com">
                     <div class="mail">
                         <div class="mail__icon">
                             <img src="img/letter.svg" alt="">
@@ -282,48 +288,126 @@
             </div>
         </div>
     </footer>
-    <section class="modal">
-        <div class="popup-frame">
-            <div class="popup-frame__title">
-                <p>Sign in</p>
+    <section class="modal modal-sign">
+        <div class="modal__container">
+            <div class="overlay">
+
             </div>
-            <div class="popup-frame__body">
-                <div class="welcome-text">
-                    <b>Welcome to Social adv</b>
-                    <p>Create new audiences for your business</p>
+            <div class="popup-frame">
+                <div class="popup-frame__title">
+                    <p>Sign in</p>
                 </div>
-                <div class="login">
-                    <div class="login__form">
-                        <label>
-                            <input class="input-custom" type="email" name="email" placeholder="Email" required>
-                            <span class="errors">
+                <div class="popup-frame__body">
+                    <div class="welcome-text">
+                        <b>Welcome to Social adv</b>
+                        <p>Create new audiences for your business</p>
+                    </div>
+                    <div class="success-text">
+                        <div class="icon">
+                            <img src="img/check.svg" alt="">
+                        </div>
+                        <b>Registration was successful</b>
+                        <p>Log in to your account using the data you entered.</p>
+                    </div>
+                    <div class="login">
+                        <div class="login__form">
+                            <label>
+                                <input class="input-custom" type="email" name="email" placeholder="Email" required>
+                                <span class="errors">
                                 Please enter a valid email address
                             </span>
-                        </label>
-                        <label>
-                            <input class="input-custom" type="password" name="pass" placeholder="Password" required>
-                            <span class="errors">
-                                Please enter a valid email address
+                            </label>
+                            <label>
+                                <input class="input-custom" type="password" name="pass" placeholder="Password" required>
+                                <span class="errors">
+                                Please enter a valid password
                             </span>
-                        </label>
-                        <div class="button__block">
-                            <button class="btn-custom btn-custom--blue" type="submit">
-                                Log in
-                            </button>
-                            <div class="links">
-                                <a href="#">Forgot your password?</a>
-                                <p>Not have an account? <a href="#">Register</a></p>
+                            </label>
+                            <div class="button__block">
+                                <button class="btn-custom btn-custom--blue" type="submit">
+                                    Log in
+                                </button>
+                                <div class="links">
+                                    <a href="#">Forgot your password?</a>
+                                    <p>Not have an account? <a class="call-register" href="#">Register</a></p>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="facebook__form">
-                        <div class="divider">
-                            <p><span>or</span></p>
+                        <div class="facebook__form">
+                            <div class="divider">
+                                <p><span>or</span></p>
+                            </div>
+                            <button class="btn-custom btn-custom--facebook">
+                                <i class="fa fa-facebook" aria-hidden="true"></i>
+                                <p>Continue with facebook</p>
+                            </button>
                         </div>
-                        <button class="btn-custom btn-custom--facebook">
-                            <i class="fa fa-facebook" aria-hidden="true"></i>
-                            <p>Continue with facebook</p>
-                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="modal modal-registration">
+        <div class="modal__container">
+            <div class="overlay">
+
+            </div>
+            <div class="popup-frame">
+                <div class="popup-frame__title">
+                    <p>Sign up</p>
+                </div>
+                <div class="popup-frame__body">
+                    <div class="welcome-text">
+                        <b>Welcome to Social adv</b>
+                        <p>Create new audiences for your business</p>
+                    </div>
+                    <div class="success-text">
+                        <div class="icon">
+                            <img src="img/check.svg" alt="">
+                        </div>
+                        <b>Registration was successful</b>
+                        <p>Log in to your account using the data you entered.</p>
+                    </div>
+
+                    <div class="registration">
+                        <div class="registration__form">
+                            <label>
+                                <input class="input-custom" type="email" name="email" placeholder="Email" required>
+                                <span class="errors">
+                                Please enter a valid email address
+                            </span>
+                            </label>
+                            <label>
+                                <input class="input-custom" type="password" name="pass" placeholder="Password" required>
+                                <span class="errors">
+                                Please enter a valid password
+                            </span>
+                            </label>
+                            <label>
+                                <input class="input-custom" type="password" name="confirm-pass" placeholder="Confirm password" required>
+                                <span class="errors">
+                                Please enter a valid password
+                            </span>
+                            </label>
+                            <div class="button__block">
+                                <button class="btn-custom btn-custom--blue" type="submit">
+                                    Create new account
+                                </button>
+                                <div class="links">
+                                    <p>Already have an account? <a class="call-sign" href="#">Sign in</a></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="facebook__form">
+                            <div class="divider">
+                                <p><span>or</span></p>
+                            </div>
+                            <button class="btn-custom btn-custom--facebook">
+                                <i class="fa fa-facebook" aria-hidden="true"></i>
+                                <p>Continue with facebook</p>
+                            </button>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -332,5 +416,6 @@
 </div>
 <script src="js/jquery-3.3.1.min.js"></script>
 <script src="js/bootstrap/bootstrap.bundle.js"></script>
+<script SRC="js/main.js"></script>
 </body>
 </html>
